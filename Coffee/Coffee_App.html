@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Coffee Application</title>
+<style type="text/css">
+    h1{text-align: center; border: red; background-color:brown;}
+    body{background-image:url("C:\\fullstack\\coffee\\Coffee.jpg") }
+    table, tr, td,th {border:2px black solid; border-collapse: collapse;}
+</style>
+
+<script type="text/javascript">
+/*function check_click() {
+    if(document.getElementById('latte').checked == true)
+    {
+        document.getElementById('nlap').s;
+
+    document.getElementById('nlap').value='3.50';
+    }
+    else
+    {
+        document.getElementById('nlap').hidden=true
+    }
+}*/
+    function totalPricecompute() {
+        var la = document.getElementById("lq").value;
+        var ca = document.getElementById("cq").value;
+        var mo = document.getElementById("mq").value;
+        var am = document.getElementById("aq").value;
+        var lac = document.getElementById("latte").value;
+        var cac = document.getElementById("cappuccino").value;
+        var moc = document.getElementById("mocha").value;
+        var amc = document.getElementById("americano").value;
+        //alert(la*lac + ca*cac + mo*moc + am*amc)
+        document.getElementById("ttp").value = la*lac + ca*cac + mo*moc + am*amc
+            }
+
+            function selectedItems(){
+               document.getElementById("ttp").value =+1
+            }
+</script>
+</head>
+<body >
+    <h1> Coffee Application using HTML, CSS, JAVASCRIPT </h1>
+    <!--<iframe src="" style="with:150; height: 150; margin-top: 100; margin-left: 50"> Coffee</iframe > -->
+    <!--<table>
+    <tr><td>-->
+    <fieldset style="width:250px; height:300px">
+        <legend style="font-weight: bold; text-align:center;"> Coffee/Espresso drinks type</legend>
+        <table style="width:250px; height:200px">
+            <caption> Coffee Table</caption>
+            <tr>
+            <th>Coffee Type</th>
+            <th>Quantity</th>
+            <th style="display:none;">Price</th>
+            </tr>
+            <tr>
+            <td> <input type="checkbox" id="latte" value="3.50" onclick="check_click()" > Latee </td>
+            <td><input type="number" max="5" min="0" maxlength="1" id="lq" change="document.getElementById("nlap").style.display="true"></td>
+            <td><input type="number" id = "nlap" name="lla" max="5" min="1" disabled="true" style="display: none;"> </td>
+            </tr>
+            <tr>
+            <td><input type="checkbox" id="cappuccino" value="2.50"> Cappuccino</td>
+            <td><input type="number" id="cq" min="0" max="5"> </td>
+            <td> <input type="number" id="ncap" maxlength="1" min="0" max="5" disabled="true" style="display:none;"></td>
+            </tr>
+            <tr>
+            <td><input type="checkbox" id="mocha" value="3.00"> Mocha </td>
+            <td><input type="number" id="mq" min="0" max="5" maxlength="1" ></td>
+            <td><input type="number" name="nmop" id="nmoc" disabled="true"  min="0" max="5" style="display:none;"> </td>
+            </tr>
+            <tr>
+            <td><input type="checkbox" id="americano" value="4.00"> Americano </td>
+            <td><input type="number" min="0" max="5" id="aq" maxlength="1" ></td>
+
+            <td> <input type="number" id="namp" disabled="true" min="0" max="5" style="display:none;"></td>
+            </tr>
+       </table>
+       <br>
+       <button name="bprice"  style="height:25px" onclick="totalPricecompute()"> CheckOut</button>
+       <h3> Total Price: <input type= "text" id="ttp" value="TotalPrice" style="width:70px; color:red"> </h3>
+    </fieldset><!--</td>
+    <td><iframe src="select.html" name="ifselect" height="300px"></iframe>
+    </td></tr></table> !-->
+
+
+</body>
+</html>
