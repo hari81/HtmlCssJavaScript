@@ -38,6 +38,11 @@
 <script type="text/javascript">
     function changeItem(inputType) {        
         console.log(inputType.value, inputType.id)
+        if(!(inputType.value < 50 && inputType.value > 0)) {
+            alert("Make sure order quantity in between 1 and 49");
+            inputType.value = '';
+            return;
+        }
         switch(inputType.id){
             case 'lq':
             var price = inputType.value * 3.50;
@@ -80,22 +85,22 @@
         </tr>
         <tr>
             <td>  Latee($3.50) </td>
-            <td><input type="number" max="50" min="0" maxlength="2" id="lq" onchange="changeItem(this)" ng-model="q1"></td>
+            <td><input type="number" max="50" min="0" maxlength="2" id="lq" style="font-size: 18px "onchange="changeItem(this)" ng-model="q1"></td>
             <td><span style='color: white; font-size: 20px' id = "nlap"></span></td>
         </tr>
         <tr>
             <td> Cappuccino ($2.50)</td>
-            <td><input type="number" id="cq" min="0" max="50" ng-model="q2" onchange="changeItem(this)"> </td>
+            <td><input type="number" id="cq" min="0" max="50" style="font-size: 18px" ng-model="q2" onchange="changeItem(this)"> </td>
             <td> <span style='color: white; font-size: 20px' id="ncap"></span></td>
         </tr>
         <tr>
             <td> Mocha($3.00) </td>
-            <td><input type="number" id="mq" min="0" max="50" maxlength="2" ng-model="q3" onchange="changeItem(this)"></td>
+            <td><input type="number" id="mq" min="0" max="50" maxlength="2" style="font-size: 18px"  ng-model="q3" onchange="changeItem(this)"></td>
             <td><span style='color: white; font-size: 20px' id="nmoc"></span></td>
         </tr>
         <tr>
             <td> Americano($4.00) </td>
-            <td><input type="number" min="0" max="50" id="aq" maxlength="2"  ng-model="q4" onchange="changeItem(this)"></td>
+            <td><input type="number" min="0" max="50" id="aq" maxlength="2" style="font-size: 18px; text-align: center;"  ng-model="q4" onchange="changeItem(this)"></td>
 
             <td> <span style='color: white; font-size: 20px' id="namp"></span></td>
         </tr>
